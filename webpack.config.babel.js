@@ -22,7 +22,7 @@ const config = {
         historyApiFallback: true,
         inline: true
     },
-}
+};
 
 if ( process.env.NODE_ENV === "production" ) {
     config.devtool = false;
@@ -33,6 +33,6 @@ if ( process.env.NODE_ENV === "production" ) {
             "process.env": {NODE_ENV: JSON.stringify("production")}
         })
     ];
-};
+}
 
 module.exports = config;
