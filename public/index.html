@@ -4,9 +4,19 @@
     <meta charset="UTF-8">
     <title>React Study Project?</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="//www.jsviews.com/download/jsrender.js"></script>
+    <script id="templateZero" type="text/x-jsrender">{{:name}}</script>
 </head>
 <body>
 <div id="root"></div>
+<div id="result"></div>
 <script type="text/javascript" src="bundle.js"></script>
+<script>
+    const tmpl = $.templates("#templateZero"); // Get compiled template
+    const data = {name: "Android Rhea"};           // Define data
+    const html = tmpl.render(data);      // Render template using data - as HTML string
+    $("#result").html(html);           // Insert HTML string into DOM
+</script>
 </body>
 </html>
