@@ -1,5 +1,35 @@
 import { delay } from "redux-saga";
-import { all, put, call, takeEvery } from "redux-saga/effects";
+import { select, all, put, call, takeEvery, take } from "redux-saga/effects";
+
+function* authorize(user, password) {
+  try {
+    const token = yield call("FAKE_API.authorize", user, password);
+    yield put({ type: "LOGIN_SUCCESS", token });
+    return token;
+  } catch (error) {
+    yield put({ type: "LOGIN_ERROR", error });
+  }
+}
+
+function* loginFlow() {
+  while (true) {
+    const { user, password } = yield take("LOGIN_REQUEST");
+    const token = yield call(authorize, user, password);
+    if (token) {
+      yield call("FAKE_API.storeItem", { token });
+      yield take("LOGOUT");
+      yield call("FAKE_API.clearItem");
+    }
+  }
+}
+
+function* watchAndLog() {
+  yield takeEvery("*", function* logger(action) {
+    const state = yield select();
+    console.log("action", action);
+    console.log("state after", state);
+  });
+}
 
 export function* incrementAsync() {
   console.log("before delay");
