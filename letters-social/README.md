@@ -42,3 +42,10 @@ If you're here, you're probably reading [_React in Action_](https://ifelse.io/bo
 Letters Social, a social networking app that leverages React, Redux, and even gets you using more interesting techniques like server-side rendering!
 
 [![React in Action by Mark Thomas](https://cdn.ifelse.io/images/letters-social-screencap.png)](https://ifelse.io/book)
+
+## React Mental Model
+
+- 컴포넌트는 상태와 속성을 이용해 데이터를 다룬다.
+- 컴포넌트는 자바스크립트 클래스이기 때문에 이벤트에 반응하기 위한 생명주기 메서드들은 물론 다른 작업을 처리하기 위한 사용자 정의 클래스 메서드를 선언할 수 있다.
+- 보통의 DOM 요소와 마찬가지로 리액트 컴포넌트 내에서도 클릭이나 입력값의 변경 등과 같은 이벤트를 리스닝할 수 있다.
+- (form 요소와 같은) 부모 컴포넌트는 자식 컴포넌트의 속성으로 콜백 메서드를 전달해서 컴포넌트 간에 통신을 지원할 수 있다.
