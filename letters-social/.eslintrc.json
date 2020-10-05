@@ -1,11 +1,12 @@
 {
-    "extends": ["prettier"],
-    "plugins": ["react"],
-    "rules": {
-        "max-len": ["error", 100],
-        "no-process-env": "off"
-    },
-    "env": {
-        "jest": true
-    }
+  "extends": ["prettier"],
+  "plugins": ["react"],
+  "rules": {
+    "max-len": ["error", 100],
+    "no-process-env": "off"
+  },
+  "parser": "babel-eslint",
+  "env": {
+    "jest": true
+  }
 }
