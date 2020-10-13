@@ -27,7 +27,7 @@ export async function getAllPosts() {
 }
 
 export async function getPostBySlug(slug) {
-  const fileContent = await import(`../_posts/${slug},md`);
+  const fileContent = await import(`../_posts/${slug}.md`);
   const meta = matter(fileContent.default);
   const content = marked(meta.content)
 
