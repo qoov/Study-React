@@ -11,7 +11,7 @@
       "@posts/*": [
         "_posts/*"
       ],
-      "@api/*": [
+      "@api": [
         "api/index"
       ],
     }
