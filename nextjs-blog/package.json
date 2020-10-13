@@ -1,0 +1,23 @@
+{
+  "name": "nextjs-blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "next": "^9.5.5",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "gray-matter": "^4.0.2",
+    "js-yaml": "^3.14.0",
+    "marked": "^1.2.0",
+    "raw-loader": "^4.0.2"
+  }
+}
