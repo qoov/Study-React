@@ -1,14 +1,7 @@
 # Study-React
 
-리액트 학습 공간
+> 🐎리액트 기초 학습 공간
 
-Update Readme.md1
-Update Readme.md1
-Update Readme.md1
-
-
-> Update Readme.md1
-
----
-> Update Readme.md1
----
+🚀 이것저것 실험 및 테스트 위주로 리액트를 알아본 학습공간
+😭 중간에 이미지가 많은 테스트 프로젝트를 사용했다가 깃 푸시, 깃 클론이 느려져서 그냥 닫아버린 비운의 저장소
+🙏 고이 잠들기를.
